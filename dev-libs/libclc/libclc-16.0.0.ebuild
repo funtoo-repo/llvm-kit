@@ -11,7 +11,7 @@ HOMEPAGE="https://libclc.llvm.org/"
 LICENSE="Apache-2.0-with-LLVM-exceptions || ( MIT BSD )"
 SLOT="0"
 KEYWORDS="*"
-IUSE="spirv video_cards_nvidia video_cards_r600 video_cards_radeonsi"
+IUSE="+spirv video_cards_nvidia video_cards_r600 video_cards_radeonsi"
 
 LLVM_MAX_SLOT=16
 BDEPEND="
@@ -20,18 +20,6 @@ BDEPEND="
 		(
 			sys-devel/clang:16
 			spirv? ( dev-util/spirv-llvm-translator:16 )
-		)
-		(
-			sys-devel/clang:15
-			spirv? ( dev-util/spirv-llvm-translator:15 )
-		)
-		(
-			sys-devel/clang:14
-			spirv? ( dev-util/spirv-llvm-translator:14 )
-		)
-		(
-			sys-devel/clang:13
-			spirv? ( dev-util/spirv-llvm-translator:13 )
 		)
 	)
 "
